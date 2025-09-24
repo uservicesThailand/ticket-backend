@@ -1,0 +1,8 @@
+# ไม่เอา node_modules ขึ้น git
+node_modules/
+
+# ไม่เอาไฟล์ .env
+.env
+
+# ไม่เอา log
+*.log
