@@ -235,7 +235,8 @@ const allowedOrigins = [
     "http://192.168.112.49:5173",
     "http://192.168.102.106:5173",
     "http://192.168.102.103:5173",
-    "https://happy-ground-05abfb200.1.azurestaticapps.net"
+    "https://happy-ground-05abfb200.1.azurestaticapps.net",
+    "http://192.168.112.6:5174"
     // ใส่ origin โปรดักชันจริงด้วย เช่น "https://jobsheet.u-services.co.th"
 ];
 
@@ -646,7 +647,7 @@ app.post("/api/issues", requireAuthJWT, async (req, res) => {
 });
 
 // PATCH /api/issues/:id/status  { status, assignee?, note? }  (admin only)
-app.patch("/api/issues/:id/status", requireAuthJWT, requireAdminJWT, async (req, res) => {
+app.patch("/api/issues/:id/status", requireAuthJWT, async (req, res) => {
     try {
         const { id } = req.params;
 
